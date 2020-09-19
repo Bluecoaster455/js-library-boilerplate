@@ -1,7 +1,7 @@
 {
-  "name": "js-library-model",
+  "name": "js-library-boilerplate",
   "version": "0.1.0",
-  "description": "",
+  "description": "This is a minimalist javascript library boilerplate for libraries and plugins.",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
