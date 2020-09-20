@@ -7,18 +7,18 @@ const config = require('./webpack.config.base');
 module.exports = {
   mode: 'production',
   entry: {
-    app: './src/index.ts'
+    app: `./src/${config.libraryName}.ts`
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "index.css"
+      filename: `${config.libraryName}.css`
     }),
     new CleanWebpackPlugin(),
     new webpack.BannerPlugin(config.banner)
   ],
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: "index.js",
+    filename: `${config.libraryName}.js`,
     chunkFilename: '[name].js',
     libraryTarget: "umd",
     libraryExport: config.libraryExport,

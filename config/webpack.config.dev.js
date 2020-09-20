@@ -8,11 +8,11 @@ const config = require('./webpack.config.base');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/index.ts'
+    app: `./src/${config.libraryName}.ts`
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "index.css"
+      filename: `${config.libraryName}.css`
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -27,7 +27,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../demo'),
     publicPath: '/',
-    filename: "index.js",
+    filename: `${config.libraryName}.js`,
     chunkFilename: '[name].js',
     libraryTarget: "umd",
     libraryExport: config.libraryExport,

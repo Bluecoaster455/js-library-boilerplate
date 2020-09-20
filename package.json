@@ -2,7 +2,8 @@
   "name": "js-library-boilerplate",
   "version": "0.1.0",
   "description": "This is a minimalist javascript library boilerplate for libraries and plugins.",
-  "main": "index.js",
+  "main": "dist/App.js",
+  "types": "dist/App.d.ts",
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --config config/webpack.config.dev.js --open",
